@@ -1,31 +1,22 @@
 <?php
- /*------------------------------------------------------------------------
+/*------------------------------------------------------------------------
 # author    Gonzalo Suez
 # Copyright © 2013 gsuez.cl. All rights reserved.
 # @license  http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
 # Website   http://www.gsuez.cl
--------------------------------------------------------------------------*/// no direct access
+-------------------------------------------------------------------------*/
 defined('_JEXEC') or die;
 JHtml::_('bootstrap.framework');
 ?>
 <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 	<jdoc:include type="head" />
-<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
-	<!--[if lte IE 8]>
-		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-		<?php  if ($pie == 1) : ?>
-			<style>
-				{behavior:url(<?php  echo $tpath; ?>/js/PIE.htc);}
-			</style>
-		<?php  endif; ?>
-	<![endif]-->
-<?php
- if($layout=='boxed'){ ?>
-<?php  $path= JURI::base().'templates/'.$this->template."/images/elements/pattern".$pattern.".png"; ?>
-<style type="text/css">
- body {
-    background: url("<?php  echo $path ; ?>") repeat fixed center top rgba(0, 0, 0, 0);
- }
-</style>
-  <?php  } ?>
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
 </head>

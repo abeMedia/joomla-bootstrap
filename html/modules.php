@@ -1,4 +1,4 @@
-<?php  
+<?php
 /*------------------------------------------------------------------------
 # author    Gonzalo Suez
 # copyright © 2013 gsuez.cl. All rights reserved.
@@ -24,44 +24,41 @@ defined('_JEXEC') or die;
  */
 function modChrome_block($module, &$params, &$attribs)
 {
- 	if (!empty ($module->content)) : ?>
-           <div class="block <?php if ($params->get('moduleclass_sfx')!='') : ?><?php echo $params->get('moduleclass_sfx'); ?><?php endif; ?>">
-           	<div class="moduletable">           	
-	           	<?php if ($module->showtitle != 0) : ?>
-			<div class="module-title">
-	                		<<?php echo $params->get('header_tag'); ?> class="title"><span class="<?php echo $params->get('header_class'); ?>" ></span><?php echo $module->title ; ?></<?php echo $params->get('header_tag'); ?>>
-			</div>
-	                	<?php endif; ?>
-	                	<div class="module-content">
-	                		<?php echo $module->content; ?>
-	                	</div>
-              </div>             	
-           </div>
-	<?php endif;
+  if (!empty($module->content)) : ?>
+    <div class="block <?php if ($params->get('moduleclass_sfx')!='') : ?><?php echo $params->get('moduleclass_sfx'); ?><?php endif; ?>">
+      <div class="moduletable">
+        <?php if ($module->showtitle != 0) : ?>
+        <div class="module-title">
+          <<?php echo $params->get('header_tag'); ?> class="title"><span class="<?php echo $params->get('header_class'); ?>" ></span><?php echo $module->title ; ?></<?php echo $params->get('header_tag'); ?>>
+        </div>
+        <?php endif; ?>
+        <div class="module-content">
+          <?php echo $module->content; ?>
+        </div>
+      </div>
+    </div>
+  <?php endif;
 }
-	function modChrome_MBstyle($module, &$params, &$attribs){
-			$headerTag    = htmlspecialchars($params->get('header_tag', 'h3'), ENT_COMPAT, 'UTF-8');
-			$headerClass  = $params->get('header_class');
-				if (!empty ($module->content)) :
-				?>
-			           <div class="MBstyle <?php  if ($params->get('moduleclass_sfx')!='') : ?><?php  echo $params->get('moduleclass_sfx'); ?><?php  endif; ?>">
-			           	<div class="moduletable">           	
-				     <?php  if ($module->showtitle != 0) : ?>
-						<div class="module-title <?php echo $params->get('header_class'); ?>">
-					<?php echo
-	                		'<' . $headerTag . ' class="title">' . $module->title . '</' . $headerTag . '>'
-						?>
-			           	 <div class="title-line"> 
-						<span></span> 
-					</div>
-				  </div>
-				    <?php  endif; ?>
-	                	<div class="module-content">
-	                <?php  echo $module->content; ?>
-	                	</div>
-		              </div>             	
-		           </div>
-	<?php 
-		endif;
-	}
-?>
+
+function modChrome_MBstyle($module, &$params, &$attribs)
+{
+    $headerTag    = htmlspecialchars($params->get('header_tag', 'h3'), ENT_COMPAT, 'UTF-8');
+    $headerClass  = $params->get('header_class');
+    if (!empty($module->content)) : ?>
+    <div class="MBstyle <?php  if ($params->get('moduleclass_sfx')!='') : ?><?php  echo $params->get('moduleclass_sfx'); ?><?php  endif; ?>">
+      <div class="moduletable">
+        <?php  if ($module->showtitle != 0) : ?>
+        <div class="module-title <?php echo $params->get('header_class'); ?>">
+          <?php echo '<' . $headerTag . ' class="title">' . $module->title . '</' . $headerTag . '>' ?>
+          <div class="title-line">
+            <span></span>
+          </div>
+        </div>
+        <?php endif; ?>
+        <div class="module-content">
+          <?php echo $module->content; ?>
+        </div>
+      </div>
+    </div>
+    <?php endif;
+}
