@@ -23,6 +23,10 @@
     "url": "https://github.com/gsuez/master-bootstrap-3/issues"
   },
   "homepage": "https://github.com/gsuez/master-bootstrap-3#readme",
+  "dependencies": {
+    "bootstrap-sass": "^3.3.7",
+    "font-awesome": "^4.7.0"
+  },
   "devDependencies": {
     "beepbeep": "^1.2.0",
     "browser-sync": "^2.11.2",
