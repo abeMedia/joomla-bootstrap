@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "https://www.joomla.org/xml/dtd/2.5/template-install.dtd">
 <extension version="3.5" type="template" method="upgrade">
-	<name>Master Bootstrap</name>
+	<name>Bootstrap</name>
 	<creationDate>January 2018</creationDate>
 	<author>Adam Bouqdib</author>
 	<copyright>Copyright © 2018 Adam Bouqdib</copyright>
@@ -11,13 +11,11 @@
 	<description>Joomla Bootstrap template based on Master Bootstrap by Gonzalo Suez.</description>
 	<files>
 		<folder>css</folder>
-		<folder>fonts</folder>
 		<folder>html</folder>
 		<folder>images</folder>
 		<folder>includes</folder>
 		<folder>js</folder>
 		<folder>scss</folder>
-		<folder>vendor</folder>
 		<filename>component.php</filename>
 		<filename>error.php</filename>
 		<filename>index.php</filename>

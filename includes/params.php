@@ -13,10 +13,8 @@ $app = JFactory::getApplication();
 $doc = JFactory::getDocument();
 
 // Column widths
-$leftcolgrid = ($this->countModules('left') == 0) ? 0 :
-$this->params->get('leftColumnWidth', 3);
-$rightcolgrid = ($this->countModules('right') == 0) ? 0 :
-$this->params->get('rightColumnWidth', 3);
+$leftcolgrid = (!$this->countModules('left')) ? 0 : $this->params->get('leftColumnWidth', 3);
+$rightcolgrid = (!$this->countModules('right')) ? 0 : $this->params->get('rightColumnWidth', 3);
 
 // Add javascript files
 // Include all compiled plugins (below), or include individual files as needed
@@ -24,8 +22,6 @@ $doc->addScript('templates/' . $this->template . '/js/holder.js');
 $doc->addScript('templates/' . $this->template . '/js/headroom.min.js');
 
 // Add Stylesheets
-$doc->addStyleSheet('templates/' . $this->template . '/css/bootstrap.min.css');
-$doc->addStyleSheet('templates/' . $this->template . '/css/icons.css');
 $doc->addStyleSheet('templates/' . $this->template . '/css/template.min.css');
 
 // Variables

@@ -1,0 +1,115 @@
+// make bootstrap 3 backwards compatible (kinda)
+
+.row-fluid {
+  @extend .row;
+}
+@for $i from 1 through $grid-columns {
+  .span#{$i} {
+    @extend .col-sm-#{$i};
+  }
+
+  .offset#{$i} {
+    @extend .col-sm-offset-#{$i};
+  }
+}
+
+.btn {
+  @extend .btn-default;
+}
+
+.control-group {
+  @extend .form-group;
+}
+
+.form-horizontal {
+  .control-group {
+    .control-label {
+      @extend .col-sm-4;
+    }
+
+    .controls {
+      @extend .col-sm-12;
+    }
+
+    .control-label + .controls {
+      @extend .col-sm-8;
+    }
+  }
+}
+
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="tel"],
+input[type="url"],
+input[type="text"] {
+  @extend .form-control;
+}
+
+.btn-micro,
+.btn-mini {
+  @extend .btn-xs;
+}
+
+.btn-small {
+  @extend .btn-sm;
+}
+
+.btn-large {
+  @extend .btn-lg;
+}
+
+.visible-phone {
+  @extend .visible-xs;
+}
+
+.visible-tablet {
+  @extend .visible-sm;
+}
+
+.visible-desktop {
+  @extend .visible-md;
+  @extend .visible-lg;
+}
+
+.hidden-phone {
+  @extend .hidden-xs;
+}
+
+.hidden-tablet {
+  @extend .hidden-sm;
+}
+
+.hidden-desktop {
+  @extend .hidden-md;
+  @extend .hidden-lg;
+}
+
+.input-small {
+  @extend .input-sm;
+}
+
+.input-large {
+  @extend .input-lg;
+}
+
+ul.unstyled {
+  @extend .list-unstyled;
+}
+
+ul.inline {
+  @extend .list-inline;
+}
+
+.muted {
+  @extend .text-muted;
+}
+
+.input-append,
+.input-prepend {
+  @extend .input-group;
+}
+
+.add-on {
+  @extend .input-group-addon;
+}

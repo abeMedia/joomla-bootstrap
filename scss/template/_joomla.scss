@@ -1,0 +1,10 @@
+.element-invisible {
+  @extend .sr-only;
+}
+
+.chzn-container {
+  width: auto !important;
+}
+.form-horizontal .chzn-container {
+  width: 100% !important;
+}

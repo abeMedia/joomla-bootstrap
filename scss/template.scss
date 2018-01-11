@@ -6,11 +6,17 @@
 
 // Variables
 @import "template/variables";
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+// use font files from CDN (as they will be in most user's cache already)
+$fa-font-path: "https://netdna.bootstrapcdn.com/font-awesome/latest/fonts";
+@import "../node_modules/font-awesome/scss/font-awesome";
+
+// @import "../node_modules/bootstrap-chosen/bootstrap-chosen.scss";
 
 // Template elements
-@import "template/main";
-@import "template/forms";
+// @import "template/main";
+@import "template/bootstrap2";
+@import "template/joomla";
 @import "template/chosen";
-
-// User customisations
-@import "template/custom";
+@import "template/icons";

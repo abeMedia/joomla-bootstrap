@@ -1,6 +1,6 @@
 {
-  "name": "master-bootstrap",
-  "version": "1.2.2",
+  "name": "joomla-bootstrap",
+  "version": "0.0.1",
   "description": "Bootstrap 3 template for Joomla!",
   "main": "gulpfile.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/gsuez/master-bootstrap-3.git"
+    "url": "git://github.com/abemedia/joomla-bootstrap.git"
   },
   "keywords": [
     "joomla",
@@ -20,19 +20,22 @@
   "author": "Gonzalo Suez <info@gsuez.cl>",
   "license": "GPL-2.0",
   "bugs": {
-    "url": "https://github.com/gsuez/master-bootstrap-3/issues"
+    "url": "https://github.com/abemedia/joomla-bootstrap/issues"
   },
-  "homepage": "https://github.com/gsuez/master-bootstrap-3#readme",
+  "homepage": "https://github.com/abemedia/joomla-bootstrap#readme",
   "dependencies": {
+    "bootstrap-chosen": "^1.4.2",
     "bootstrap-sass": "^3.3.7",
+    "chosen-js": "^1.8.2",
     "font-awesome": "^4.7.0"
   },
   "devDependencies": {
     "beepbeep": "^1.2.0",
-    "browser-sync": "^2.11.2",
+    "browser-sync": "^2.23.5",
     "del": "^2.2.0",
     "fs": "0.0.2",
     "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.1.0",
     "gulp-clean-css": "^2.0.4",
     "gulp-concat": "^2.6.0",
     "gulp-plumber": "^1.1.0",
